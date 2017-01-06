@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Mon agenda</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="vue/css/index.css" />
+    <link rel="stylesheet" href="framework/css/jquery-ui.min.css">
+    <script src="framework/js/jquery-2.2.4.min.js"></script>
+    <script src="framework/js/jquery-ui.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true
+                , changeYear: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="tool_tip">
+        <h2>Liste des rendez vous du <span class="num_day"> </span> :</h2>
+        <p class="list_events"> </p> <span class="handler_event_conflict"></span> </div>
+    <div class="new_rdv">Date sélectionnée: le <span class="hidden_date"></span>
+        <br/>heure selectionnée <span class="hidden_hour"></span>: <span class="minute_range"></span>
+        <input class="input_range" type="number" value="00" max="59" min="0" step="10" /> <span class="hidden_date_to_post_main"></span>
+        <br/> Saisir un message
+        <textarea id="message_content" rows="7" cols="60"></textarea>
+        <button id="submit_message">Soumettre</button>
+        <div id="help_user">appuyez sur Echap ou en dehors du calendrier pour fermer la fenetre</div>
+    </div>
+    <div id="main">
+        <div id="titre">MON AGENDA</div>
+        <div id="datepicker"></div>
+        <div id="tool_tip_edit_rdv">
+            <h2>Liste des rendez vous du <span class="num_day"> </span> à <span class="num_hour"></span></h2>
+            <div class="list_events_edit_rdv"> </div> <span id="handler_event_conflict_edit_rdv"></span>
+            <div class="add_rdv"></div>
+            <br/>
+            <textarea id="textarea_msg" rows=5 cols=60 disabled="disabled"></textarea>
+            <br/>
+            <button class="edit_button">Valider</button>
+            <br/>
+            <div id="add_rdv_icon"><img src="img/orange-plus-icon-3.png" width="50" /> Rajouter un rendez-vous pour ce créneau horaire</div>
+            <br/>
+            <br/>
+            <a href="index.php">
+                <figure><img src="img/home.png" width="80" alt="Retour" title="Retour" />
+                    <figcaption>retour</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div id="main_frame">
+            <div id="semaine_arrow">
+                <a href="#"><img src="img/fleche-gauche.png" width="70" alt="fleche gauche" title="fleche gauche" /></a>
+                <div id="info_semaine"></div>
+                <a href="#"><img src="img/fleche-droite.png" width="70" alt="fleche gauche" title="fleche droite" /></a>
+            </div>
+            <ul id="day_ul">
+                <li class="day_li background_default"><span class="date_displayed">Lundi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Mardi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Mercredi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Jeudi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Vendredi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Samedi <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default"><span class="date_displayed">Dimanche <span class="num_jour"></span> / <span class="num_month"></span></span><span class="hidden_date_to_post"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>09h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>10h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>11h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>12h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>13h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>14h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>15h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>16h
+                            <p class="message"></p>
+                        </li>
+                        <li class="hour_li">
+                            <hr/>17h
+                            <p class="message"></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

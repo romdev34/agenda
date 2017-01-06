@@ -1,0 +1,253 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #105B63;
+    color: #fffbe1;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#datepicker {
+    margin: auto;
+    margin-top: -30px;
+}
+
+#titre {
+    margin-bottom: 50px;
+    font-size: 4em;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #BD4932;
+    width: 100%;
+    padding: 30px;
+}
+
+#semaine_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#main_frame {
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 72%;
+}
+
+aside {
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+    margin-top: 140px;
+}
+
+#day_ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: auto 0;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+    max-height: 60%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.hour_ul {
+    list-style: none;
+    font-family: 'Lora', serif;
+    padding: 0;
+    margin: 0;
+    background: rgb(0, 0, 0);
+    color: black;
+    width: 165px;
+}
+
+.day_li {
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.hour_li {
+    display: block;
+    position: relative;
+    height: 100px;
+    width: 165px;
+    right: 0px;
+    padding: 0;
+    margin: auto 0;
+    background-color: #f8f7eb;
+    white-space: normal;
+}
+
+.hour_li:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.message {
+    width: 100%;
+}
+
+#info_semaine {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.background_default {
+    background-color: #efe4a0;
+    color: black;
+}
+
+
+/*
+.background_selected {
+    background-color: #42b99f;
+}
+*/
+
+.background_selected {
+    background-color: #ffed68;
+}
+
+.background_dday {
+    background-color: #BD4932;
+    color: black;
+}
+
+#tool_tip {
+    z-index: 200;
+    background-color: #051010;
+    border: 10px solid black;
+    border-radius: 5px;
+    display: none;
+    font-weight: bold;
+    position: fixed;
+    width: 500px;
+    height: 230px;
+    margin-left: 30%;
+    padding: 5px;
+    opacity: 0.99;
+    color: white;
+}
+
+.list_events {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#tool_tip h2 {
+    text-align: center;
+}
+
+.num_day {
+    color: #ffed68;
+}
+
+.new_rdv {
+    color: white;
+    text-align: center;
+    z-index: 100;
+    font-weight: bold;
+    background-color: #051010;
+    opacity: 0.92;
+    border: 3px solid black;
+    border-radius: 5px;
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: 230px;
+    margin-left: 30%;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+#help_user {
+    font-size: small;
+    font-style: italic;
+}
+
+a:visited {
+    color: white;
+}
+
+.hidden_date {
+    color: #ffed68;
+}
+
+#hidden_hour {
+    color: rgb(63, 203, 255);
+}
+
+.handler_event_conflict {
+    display: none;
+}
+
+.hidden_date_to_post {
+    display: none;
+}
+
+.hidden_date_to_post_main {
+    display: none;
+}
+
+#tool_tip_edit_rdv {
+    text-align: center;
+    display: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #fffbe1;
+    width: 100%;
+}
+
+#tool_tip_edit_rdv a {
+    color: black;
+}
+
+.edit_link {
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+
+.delete_link {
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+}
+
+#input_range {
+    margin-left: 10px;
+}
+
+#add_rdv_icon {
+    align-items: center;
+    display: flex;
+    width: 400px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #965e05;
+    border-radius: 20px;
+    background-color: bisque;
+    color: black;
+}
+
+#add_rdv_icon:hover {
+    cursor: pointer;
+}

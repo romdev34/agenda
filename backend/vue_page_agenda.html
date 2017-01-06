@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>My agenda</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../vue/css/index.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lora:700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Tillana" rel="stylesheet">
+    <script src="../framework/js/jquery-2.2.4.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true
+                , changeYear: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="titre">MY AGENDA</div>
+    <div id="main">Date:
+        <div id="datepicker"></div>
+        <div id="main_frame">
+            <div id="semaine_arrow">
+                <a href="#"><img src="../img/fleche-gauche.png" width="70" alt="fleche gauche" title="fleche gauche" /></a>
+                <div id="info_semaine"></div>
+                <a href="#"><img src="../img/fleche-droite.png" width="70" alt="fleche gauche" title="fleche droite" /></a>
+            </div>
+            <ul id="day_ul">
+                <li class="day_li background_default">Lundi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Mardi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Mercredi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Jeudi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Vendredi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Samedi <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+                <li class="day_li background_default">Dimanche <span class="num_jour"></span>
+                    <ul class="hour_ul">
+                        <li class="hour_li">
+                            <hr/>08h </li>
+                        <li class="hour_li">
+                            <hr/>09h </li>
+                        <li class="hour_li">
+                            <hr/>10h </li>
+                        <li class="hour_li">
+                            <hr/>11h </li>
+                        <li class="hour_li">
+                            <hr/>12h </li>
+                        <li class="hour_li">
+                            <hr/>13h </li>
+                        <li class="hour_li">
+                            <hr/>14h </li>
+                        <li class="hour_li">
+                            <hr/>15h </li>
+                        <li class="hour_li">
+                            <hr/>16h </li>
+                        <li class="hour_li">
+                            <hr/>17h </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
